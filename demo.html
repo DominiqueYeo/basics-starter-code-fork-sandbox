@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML CSS DEMO</title>
+  </head>
+
+  <body>
+    <h1>HTML CSS DEMO</h1>
+    <h2>HTML is made up of elements</h2>
+    <h3>That the browser use to build your webpage</h3>
+    <div>
+      <p>
+        These elements have some default styling that will affect how they look.
+        We will look at changing these styles when we talk about CSS
+      </p>
+      <p>
+        So all you need to add things on your webpage is to add a relevant
+        elements
+      </p>
+    </div>
+    <div>
+      <p>So some of these elements are :</p>
+      <ul>
+        <li>H1,H2...</li>
+        <li>p , span</li>
+        <li>and lists like this</li>
+      </ul>
+    </div>
+    <h3>One thing to take note is parent and child elements</h3>
+
+    <h1 style="color: red;">Now I want to talk about styling</h1>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basics</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        margin-left: 30px;
+        margin-right: 30px;
+      }
+
+      #header {
+        text-align: center;
+      }
+
+      #container {
+        background-color: pink;
+        margin: 40px auto;
+        max-width: 800px;
+        padding: 38px 31px;
+      }
+
+      input {
+        font-size: 21px;
+        line-height: 33px;
+        margin: 0 0 23px 0;
+        padding: 0 9px;
+        width: 100%;
+      }
+
+      button {
+        font-size: 21px;
+        line-height: 33px;
+        margin: 0 0 23px 0;
+        padding: 0 6px;
+      }
+
+      #output-div {
+        background-color: lightgrey;
+        margin: 20px auto;
+        padding: 20px;
+        width: 100%;
+      }
+      h1 {
+        border: red;
+        border-width: 10px;
+        border-style: solid;
+      }
+      .demo {
+        border: blue;
+        border-width: 10px !important;
+        border-style: solid;
+      }
+      #test {
+        border: green;
+        border-width: 10px;
+        border-style: solid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="color: blue;" id="header">Basics!</h1>
+    <h1 class="demo">Hello</h1>
+    <h1 id="test">Hello</h1>
+    <div id="container">
+      <p class="demo">Input:</p>
+      <input id="input-field" />
+      <br />
+      <button id="submit-button">Submit</button>
+      <p id="test">Output:</p>
+      <div id="output-div"></div>
+    </div>
+    <script src="script_error.js"></script>
+    <script>
+      var button = document.querySelector("#submit-button");
+      button.addEventListener("click", function () {
+        // Set result to input value
+        var input = document.querySelector("#input-field");
+        var result = main(input.value);
+
+        // Display result in output element
+        var output = document.querySelector("#output-div");
+        output.innerHTML = result;
+
+        // Reset input value
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>
